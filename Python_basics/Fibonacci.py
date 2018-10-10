@@ -23,7 +23,7 @@ def factorial(n):
 
 
 while True:
-    choice = int(input('Enter 1 to get Fibo series, 2 to find factorial of the number:, 3 to exit '))
+    choice = int(input('Enter 1 to get Fibo series, 2 to find factorial of the number, 3 to exit: '))
     if choice == 1:
         fibonacci()
     elif choice == 2:
@@ -33,4 +33,3 @@ while True:
     else:
         print('Quitting...')
         break
-
