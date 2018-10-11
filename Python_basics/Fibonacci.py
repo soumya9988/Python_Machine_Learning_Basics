@@ -1,16 +1,12 @@
 def fibonacci():
-    a = 1
-    b = 0
     series = [1]
     lim = int(input('Enter the no of fibonacci number that you want to print: '))
     print('First %d numbers of Fibonacci series are: ' % lim)
-    count = lim - 1
-    while count > 0:
-        sum = a + b
-        series.append(sum)
-        count -= 1
-        b = a
-        a = sum
+    while len(series) < lim:
+        if len(series) == 1:
+            series.append(1)
+        else:
+            series.append(series[-1] + series[-2])
 
     print(series)
 
