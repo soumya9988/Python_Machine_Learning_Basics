@@ -1,3 +1,4 @@
+spcl_char = ' ,!@#$.'
 str = input('Enter the string that you want to reverse: ')
 print('Reversed string is :', str[::-1])
 count = 0
@@ -9,7 +10,7 @@ print('Number of vowels are ', count)
 
 
 # check for Palindrome
-if str.lower().replace(" ", "") == str[::-1].lower().replace(" ", ""):
+if str.lower().replace(spcl_char, "") == str[::-1].lower().replace(spcl_char, ""):
     print('This is a palindrom')
 
 # Piglatin
