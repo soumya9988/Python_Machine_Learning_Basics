@@ -2,7 +2,6 @@ from random import randint
 
 
 gen_num = str(randint(1000, 9999))
-print(gen_num)
 while True:
     cow_bull = [0, 0]
     user_choice = input('Enter the number: ')
