@@ -3,7 +3,7 @@ from time import sleep
 
 while True:
     choice = int(input('Please enter a number: '))
-    comp_choice = randint(1, 10)
+    comp_choice = randint(1, 100)
     print('Generating computer choice...')
     sleep(1)
     print('Computer choice is', comp_choice)
