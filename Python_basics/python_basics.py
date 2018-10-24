@@ -17,13 +17,28 @@ def repeat_exclaim(word, exclaim):
     print('-' * 20)
 
 
+def sort_alpha_num(s):
+    i = s.split(None, 1)[0]
+    if i.isnumeric():
+        return int(i)
+    return s
+
+
 def main():
     print_arg()
     repeat_exclaim('Hello ', True)
+    line = input('Enter the sentence separated by space: ')
+    list_words = line.split(' ')
+    set_word = set(list_words)
+    set_word = sorted(set_word, key=sort_alpha_num, reverse=True)
+    print(', '.join(set_word))
     sys.exit(0)
 
 
 if __name__ == '__main__':
     main()
+
+
+
 
 

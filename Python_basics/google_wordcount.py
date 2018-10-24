@@ -43,19 +43,14 @@ import sys
 def get_word_count(filename):
     word_count = {}
     with open(filename,'r') as fname:
-        while True:
-            line = fname.readline()
-            if len(line) <= 0:
-                break
+        line = fname.read().strip()
+        word_list = line.split()
+        for word in word_list:
+            word = word.lower()
+            if word in word_count:
+                word_count[word] += 1
             else:
-                line = line.strip()
-                word_list = line.split(' ')
-                for word in word_list:
-                    word = word.lower()
-                    if word in word_count:
-                        word_count[word] += 1
-                    else:
-                        word_count[word] = 1
+                word_count[word] = 1
     if not fname.closed:
         fname.close()
     return word_count
