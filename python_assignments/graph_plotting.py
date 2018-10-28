@@ -47,7 +47,6 @@ def word_cloud_generator(pdf):
     wc = WordCloud(background_color='gray',
                    max_words=250,
                    stopwords=stop_words).generate(words_webpage)
-    plt.axis('off')
     plt.imshow(wc)
     pdf.savefig()
     plt.close()
