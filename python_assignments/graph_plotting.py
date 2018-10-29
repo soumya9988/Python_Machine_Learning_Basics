@@ -64,7 +64,7 @@ def weather_report_plano(pdf):
     for i in range(7):
         # Formatting the date
         new_date = (day + datetime.timedelta(days=i)).strftime('%Y-%m-%d')
-        search_date = new_date + 'T00:00:00'
+        search_date = new_date  + 'T00:00:00'
 
         # API call to dark sky
         response = requests.get(
