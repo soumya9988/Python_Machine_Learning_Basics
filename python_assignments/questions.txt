@@ -1,4 +1,4 @@
-1. Create a website downloader. Given a url, find all the links and store each page into local machine.
+    1. Create a website downloader. Given a url, find all the links and store each page into local machine.
 You may use python libraries for HTTP requests, file IO, Pattern matching etc. If the downloaded page contains other
 links, they also are downloaded. Cycles, if any, must be identified and handled.
 
