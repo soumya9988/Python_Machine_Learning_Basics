@@ -1,6 +1,12 @@
+Number of failed login : 6
+ Detected brute force attacks : user1
+ Time limit in minutes: 30
+
 Number of failed login : 3
  Detected brute force attacks : user2
+ Time limit in minutes: 30
 
 Number of failed login : 3
  Detected brute force attacks : user3
+ Time limit in minutes: 30
 

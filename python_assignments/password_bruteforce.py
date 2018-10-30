@@ -5,7 +5,7 @@ log_dict = {}
 fmt = '%m:%d:%Y %H:%M:%S'
 
 login = int(input('Enter the number of failed login for brute forcing: '))
-minute = int(input('Enter the time limit: '))
+minute = int(input('Enter the time limit in minutes: '))
 
 with open('logfile_password.txt') as file:
     log_list = [line.rstrip() for line in file]
@@ -17,7 +17,6 @@ for line in log_list:
     date_time = line[1] + " " + line[2]
     line_time = datetime.strptime(date_time, fmt)
     delta_time = line_time + timedelta(minutes= minute)
-
     for itm in log_list:
         itm = itm.split(" ")
         itm_time = itm[1] + " " + itm[2]
@@ -34,4 +33,6 @@ with open('output_file.txt', 'w') as op_file:
         op_file.write(login_det)
         attacker = ' Detected brute force attacks : ' + str(line) + '\n'
         op_file.write(attacker)
+        time_limit = ' Time limit in minutes: ' + str(minute) + '\n'
+        op_file.write(time_limit)
         op_file.write('\n')
