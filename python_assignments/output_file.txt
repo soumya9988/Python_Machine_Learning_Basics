@@ -1,0 +1,6 @@
+Number of failed login : 3
+ Detected brute force attacks : user2
+
+Number of failed login : 3
+ Detected brute force attacks : user3
+
