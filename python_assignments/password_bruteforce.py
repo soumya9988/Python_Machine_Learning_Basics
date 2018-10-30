@@ -1,29 +1,37 @@
-
 from datetime import datetime
 from datetime import timedelta
+
+log_dict = {}
 fmt = '%m:%d:%Y %H:%M:%S'
-log_list = []
+
+login = int(input('Enter the number of failed login for brute forcing: '))
+minute = int(input('Enter the time limit: '))
+
 with open('logfile_password.txt') as file:
     log_list = [line.rstrip() for line in file]
 
 
 for line in log_list:
+    counter = 0
     line = line.split(" ")
-    line_time = line[1] + " " + line[2]
-    delta_time = datetime.strptime(line_time, fmt) + timedelta(minutes= 30)
-    print(delta_time)
+    date_time = line[1] + " " + line[2]
+    line_time = datetime.strptime(date_time, fmt)
+    delta_time = line_time + timedelta(minutes= minute)
 
-import re
-import datetime
+    for itm in log_list:
+        itm = itm.split(" ")
+        itm_time = itm[1] + " " + itm[2]
+        item_time = datetime.strptime(itm_time, fmt)
+        if line_time <= item_time < delta_time and itm[0] == line[0]:
+            counter += 1
+    if counter >= login and line[0] not in log_dict:
+        log_dict[line[0]] = counter
 
-match_record = re.compile(r"^[^ ]+ - (C[^ ]*) \[([^ ]+)").match
-strptime = datetime.datetime.strptime
 
-f = open("very/big/log", "rb")
-
-for line in f:
-    match = match_record(line)
-    if match is not None:
-        user, str_time = match.groups()
-        time = strptime(str_time, "%d/%b/%Y:%H:%M:%S")
-        print user, repr(time)
+with open('output_file.txt', 'w') as op_file:
+    for line in log_dict:
+        login_det = 'Number of failed login : ' + str(log_dict[line]) + '\n'
+        op_file.write(login_det)
+        attacker = ' Detected brute force attacks : ' + str(line) + '\n'
+        op_file.write(attacker)
+        op_file.write('\n')
