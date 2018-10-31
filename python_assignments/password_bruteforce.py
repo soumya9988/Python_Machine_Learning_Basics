@@ -13,19 +13,16 @@ with open('logfile_password.txt') as file:
 
 for line in log_list:
     counter = 0
-    line = line.split(" ")
-    date_time = line[1] + " " + line[2]
-    line_time = datetime.strptime(date_time, fmt)
+    line = line.split(" ", 1)
+    line_time = datetime.strptime(line[1], fmt)
     delta_time = line_time + timedelta(minutes= minute)
     for itm in log_list:
-        itm = itm.split(" ")
-        itm_time = itm[1] + " " + itm[2]
-        item_time = datetime.strptime(itm_time, fmt)
+        itm = itm.split(" ", 1)
+        item_time = datetime.strptime(itm[1], fmt)
         if line_time <= item_time < delta_time and itm[0] == line[0]:
             counter += 1
     if counter >= login and line[0] not in log_dict:
         log_dict[line[0]] = counter
-
 
 with open('output_file.txt', 'w') as op_file:
     for line in log_dict:
