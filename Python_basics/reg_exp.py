@@ -55,4 +55,22 @@ if sent_tweet:
     print(sent_tweet)
 
 
+string = 'Python exercises, PHP exercises, C# exercises'
+pattern = re.compile(r'exercises', re.IGNORECASE)
+check = pattern.finditer(string)
+for item in check:
+    print('Check:', item.group(), item.start(), item.end())
+
+
+fox_str = 'The quick brown fox jumps over the lazy dog.'
+pattern = re.compile(r'fox', re.IGNORECASE)
+check = pattern.search(fox_str)
+if check:
+    print('Fox at: ', check.group(), check.start(), check.end())
+
+list_words = ["example (.com)", "w3resource", "github (.com)", "stackoverflow (.com)"]
+pattern = re.compile(r'\(\.\w+\)')
+for item in list_words:
+    new_word = pattern.sub('', item)
+    print('Word: ', new_word)
 

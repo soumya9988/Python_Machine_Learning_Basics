@@ -33,6 +33,18 @@ def hexadecimal(str):
     check = pattern.findall(str)
     return check
 
+
+def certain_char(str):
+    pattern = re.compile(r'[^A-Z0-9]', re.IGNORECASE)
+    check = pattern.search(str)
+    return bool(check)
+
+
+def a_and_b(str):
+    pattern = re.compile(r'^ab{2,3}')
+    check = pattern.search(str)
+    return bool(check)
+
 print('Vowels in Monday:' , has_vowels('Monday is a holiday'))
 print('Vowels in Fly:', has_vowels('Fly spy dry sky'))
 print(is_integer(""))
@@ -54,3 +66,8 @@ print(is_fraction("/5"))
 print(get_file_extension('archive.tar.gz'))
 print(get_file_extension('index.xhtml'))
 print(hexadecimal('This is decaf coffee for bead and bread in cafe'))
+print('Certain char: ', certain_char('Abcd123'))
+print('Certain char: ', certain_char('Abcd123@'))
+print('a and b: ', a_and_b('abb'))
+print('a and b: ', a_and_b('acbbbbbb'))
+print('a and b: ', a_and_b('abbbb'))
