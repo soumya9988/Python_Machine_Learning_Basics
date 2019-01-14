@@ -32,7 +32,7 @@ class BankAccount(object):
 
 my_account = BankAccount('Nivedh')
 print(my_account)
-my_account.deposit(0)
+my_account.deposit(10)
 my_account.deposit(10000)
 my_account.withdraw(20000)
 my_account.withdraw(200)
