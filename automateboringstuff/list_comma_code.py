@@ -14,5 +14,5 @@ def list_to_string(list_val):
     return full_string
 
 
-spam = ['apples', '129' , 'broccoli', 'bananas', '3.14' , 'cats']
+spam = ['apples', '129' , 'broccoli', 'bananas', '3.14' , 'cats', 'dogs', 'pigeons']
 print(list_to_string(spam))
