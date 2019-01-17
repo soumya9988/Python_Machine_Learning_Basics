@@ -1,3 +1,7 @@
+"""
+Chapter 7 – Pattern Matching with Regular Expressions on Automate the boring stuff
+
+"""
 import re
 
 
@@ -7,7 +11,8 @@ def password_detector(password):
     Accepts a password string and check if it contais:
     - at least one digit
     - Both uppercase and lowercase alphabet
-    >>> password_detector(Ambhs12)
+    - at least 8 characters long
+    >>> password_detector(Ambhs012)
     True
     >>> password_detector(123)
     False
@@ -21,11 +26,11 @@ def password_detector(password):
     check2 = bool(match_lower.search(password))
     match_number = re.compile(r'[0-9]')
     check3 = bool(match_number.search(password))
-    return check1 and check2 and check3
+    return check1 and check2 and check3 and len(password) >= 8
 
 
 print(password_detector('123'))
 print(password_detector('password'))
 print(password_detector('Ppassword'))
 print(password_detector('12aA'))
-print(password_detector('Ambhs12'))
+print(password_detector('Ambhs012'))
