@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "basics_error_handling.py", line 4, in <module>
+    raise Exception('This is a test exception raised')
+Exception: This is a test exception raised
