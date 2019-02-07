@@ -28,6 +28,9 @@ new_sheet = work_book['New Bacon']
 new_sheet.append([10, 100.00])
 new_sheet.append([2, 12.50])
 
+add_val_to_cell = work_book['New Egg']
+add_val_to_cell['B3'] = 'check'
+
 work_book.save('basic_excel.xlsx')
 
 # Removing worksheet
