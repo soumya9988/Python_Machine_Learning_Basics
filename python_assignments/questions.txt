@@ -32,3 +32,6 @@ Height(in inches)   Shoe size
 
 d) Create a word cloud for the words in the webpage:
 http://taaism.com/resumecv-writing-12-things-for-a-fresher-to-ponder/
+
+
+5. Extract email IDs from visiting card images (JPGs) using Python
