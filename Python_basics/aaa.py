@@ -1,10 +1,11 @@
-def odd(x):
-    '''
-    x: int
+import nltk
+import ssl
 
-    returns: True if x is odd, False otherwise
-    '''
-    # Your code here
-    return (x % 2 != 0)
+try:
+    _create_unverified_https_context = ssl._create_unverified_context
+except AttributeError:
+    pass
+else:
+    ssl._create_default_https_context = _create_unverified_https_context
 
-print(odd(10))
+nltk.download()
