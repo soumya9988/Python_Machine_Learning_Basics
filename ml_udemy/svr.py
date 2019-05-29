@@ -30,6 +30,7 @@ y = sc_y.fit_transform(y)
 
 # Create the regressor
 from sklearn.svm import SVR 
+# Kernal can be linear, polynomial or gaussian(rbf). Def is rbf
 regressor = SVR(kernel= 'rbf')
 regressor.fit(X, y)
 
