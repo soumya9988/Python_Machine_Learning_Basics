@@ -9,7 +9,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 
-
 # Importing the data set
 dataset = pd.read_csv('Social_Network_Ads.csv')
 X = dataset.iloc[:, [2,3]].values  # all rows, all col expect last
@@ -27,7 +26,9 @@ X_train = sc_X.fit_transform(X_train)
 X_test = sc_X.fit_transform(X_test)
 
 # Fitting classifier to training set
-# Create your classifier here
+from sklearn.ensemble import RandomForestClassifier
+classifier = RandomForestClassifier(n_estimators= 10, criterion='entropy', random_state=0)
+classifier.fit(X_train, y_train)
 
 # Predict the test set result
 y_pred = classifier.predict(X_test)
