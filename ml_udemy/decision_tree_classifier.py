@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Mon Jul  8 12:42:50 2019
+Created on Tue Jul  9 18:44:11 2019
 
 @author: vedhoos
 """
-#
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -28,9 +27,10 @@ X_train = sc_X.fit_transform(X_train)
 X_test = sc_X.fit_transform(X_test)
 
 # Fitting classifier to training set
-from sklearn.svm import SVC
-classifier = SVC(kernel='rbf', random_state=0)
+from sklearn.tree import DecisionTreeClassifier
+classifier = DecisionTreeClassifier(criterion='entropy', random_state= 0)
 classifier.fit(X_train, y_train)
+
 
 # Predict the test set result
 y_pred = classifier.predict(X_test)
@@ -51,7 +51,7 @@ plt.ylim(X2.min(), X2.max())
 for i, j in enumerate(np.unique(y_set)):
     plt.scatter(X_set[y_set == j, 0], X_set[y_set == j, 1],
                 c = ListedColormap(('red', 'green'))(i), label = j)
-plt.title('Kernal SVM (Training set)')
+plt.title('Decision Tree Classification(Training set)')
 plt.xlabel('Age')
 plt.ylabel('Estimated Salary')
 plt.legend()
@@ -70,7 +70,7 @@ plt.ylim(X2.min(), X2.max())
 for i, j in enumerate(np.unique(y_set)):
     plt.scatter(X_set[y_set == j, 0], X_set[y_set == j, 1],
                 c = ListedColormap(('red', 'green'))(i), label = j)
-plt.title('Kernal SVM(Test set)')
+plt.title('Decision Tree Classification(Test set)')
 plt.xlabel('Age')
 plt.ylabel('Estimated Salary')
 plt.legend()
