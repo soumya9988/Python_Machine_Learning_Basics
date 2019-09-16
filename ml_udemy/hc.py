@@ -38,4 +38,4 @@ plt.title('Clusters of clients')
 plt.xlabel('Annual income(k$)')
 plt.ylabel('Spending score(1-100)')
 plt.legend()
-plt.show
+plt.show()
