@@ -7,19 +7,18 @@ Created on Wed Sep 18 11:28:01 2019
 """
 
 # importing the libraries
-import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 from math import sqrt, log
 
-# importing the dataset
-dataset =  pd.read_csv('Ads_CTR_Optimisation.csv')
+# importing the data set
+dataset = pd.read_csv('Ads_CTR_Optimisation.csv')
 
 # implementing the UCB
 N = 10000
 d = 10
 ads_selected = []
-numbers_of_selections = [0] * d # Creating a vector of size d with value 0
+numbers_of_selections = [0] * d  # Creating a vector of size d with value 0
 sums_of_rewards = [0] * d
 total_reward = 0
 
@@ -42,7 +41,12 @@ for n in range(0, N):
     sums_of_rewards[ad] += reward
     total_reward += reward
 
+"""
+print('Ads selected', ads_selected)
+print('Number of selection', numbers_of_selections)
+print('Sum of rewards', sums_of_rewards)
 print(total_reward)
+"""
 
 # Visualising the results
 plt.hist(ads_selected)
