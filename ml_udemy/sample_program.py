@@ -5,6 +5,8 @@ from matplotlib.colors import ListedColormap
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import confusion_matrix
+from sklearn.metrics import accuracy_score
+from sklearn.metrics import classification_report
 
 """
 1. importing the dataset and preprocessing
@@ -65,7 +67,13 @@ y_pred = classifier.predict(X_test)
 print(y_pred)
 
 cm = confusion_matrix(y_test, y_pred)
-print(cm)
+print('Confusion matrix is: ', cm)
+
+acc = accuracy_score(y_test, y_pred)
+print('Accuracy score is: ', acc)
+
+c_report = classification_report(y_test, y_pred)
+print('Classification report is:\n ', c_report)
 
 # Visualising the Test set results
 X_set, y_set = X_test, y_test
