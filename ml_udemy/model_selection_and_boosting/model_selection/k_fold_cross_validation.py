@@ -1,10 +1,6 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Jul  8 12:42:50 2019
 
-@author: vedhoos
-"""
+# k-fold cross validation
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -38,6 +34,12 @@ y_pred = classifier.predict(X_test)
 # Making the confusion matrix
 from sklearn.metrics import confusion_matrix
 cm = confusion_matrix(y_test, y_pred)
+
+# Applying k-fold cross validation
+from sklearn.model_selection import cross_val_score
+accuracies = cross_val_score(estimator= classifier, X= X_train, y= y_train, cv=10)
+accuracies.mean()
+accuracies.std()
 
 # Visualising the Training set results
 from matplotlib.colors import ListedColormap
