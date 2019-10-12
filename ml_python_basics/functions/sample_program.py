@@ -3,6 +3,11 @@ format_story = ''
 
 
 def sentence_maker(phrase):
+    """
+    (str) --> (str)
+    Takes an input 'phrase', convert it into a sentence case and update the punctuation mark
+
+    """
     interrogative = ('what', 'why', 'when', 'how')
 
     capitalise = phrase.capitalize()

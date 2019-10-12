@@ -26,6 +26,14 @@ print(split_text)
 rejoined_text = '...'.join(split_text)
 print(rejoined_text)
 
+spam = ['apples', '129' , 'broccoli', 'bananas', '3.14', 'cats', 'dogs', 'pigeons']
+string_spam = ', '.join(spam) + '.'
+print(string_spam)
+
+sentence = '    My name is Catherine     . I love to have some icecream.      '
+list_words = sentence.split()
+print(list_words)
+
 # looping through the elements:
 for grade in student_grades:
     print(grade)
