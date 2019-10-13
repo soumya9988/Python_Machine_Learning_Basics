@@ -25,6 +25,8 @@ with open(bear_file, 'r', errors='ignore') as new_file:
 if bear_text:
     bear_txt_trim = bear_text[:90]
     print(bear_txt_trim)
+    bear_count_a = bear_text.count('a')
+    print('Count of letter a in the text file is: ', bear_count_a)
 
 # Writing to a file
 file_orig = os.path.join(work_dir, 'Maya_Angelou.txt')
