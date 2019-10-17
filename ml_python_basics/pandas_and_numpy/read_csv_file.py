@@ -21,3 +21,10 @@ print(df1.loc[:, 'Name'])
 
 # index based slicing
 print(df1.iloc[1:3, 1:3].values)
+
+df7 = pandas.read_csv('supermarkets-commas.txt', header = None)
+df7 = df7.iloc[1: , :]
+df7 = df7.set_index(1)
+df7 = df7.drop('3666 21st St', 0)
+print(df7)
+
