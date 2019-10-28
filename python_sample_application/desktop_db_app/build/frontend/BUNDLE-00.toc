@@ -1,0 +1,3 @@
+([('frontend',
+   '/Users/vedhoos/hobby_python_proj/python_sample_application/desktop_db_app/dist/frontend',
+   'EXECUTABLE')],)
