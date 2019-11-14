@@ -18,5 +18,7 @@ e1.grid(row=0, column= 3)
 t1 = Text(window, height=1, width=20)
 t1.grid(row=0, column= 5)
 
+
+
 window.mainloop()
 

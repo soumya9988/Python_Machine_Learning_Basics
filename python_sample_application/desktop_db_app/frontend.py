@@ -62,13 +62,11 @@ def add_command():
 
 
 def delete_command():
-    get_selected_row()
     backend.delete(selected_tuple[0])
     view_command()
 
 
 def update_command():
-    get_selected_row()
     backend.update(selected_tuple[0],
                    selected_tuple[1], # Title
                    selected_tuple[2], # Author
@@ -114,7 +112,7 @@ sb.grid(row=2, column=2, rowspan=6)
 lb.configure(yscrollcommand= sb.set)
 sb.configure(command=lb.yview)
 
-lb.bind('<<getSelectedRow>>', get_selected_row)
+lb.bind('<<ListboxSelect>>',get_selected_row)
 
 b1 = Button(window, text='View All', width=12, command=view_command)
 b1.grid(row=2, column=3)
@@ -131,7 +129,7 @@ b4.grid(row=5, column=3)
 b5 = Button(window, text='Delete Entry', width=12, command=delete_command)
 b5.grid(row=6, column=3)
 
-b6 = Button(window, text='Close', width=12)
+b6 = Button(window, text='Close', width=12, command=window.destroy)
 b6.grid(row=7, column=3)
 
 
