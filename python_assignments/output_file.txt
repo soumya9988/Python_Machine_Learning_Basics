@@ -1,0 +1,4 @@
+Number of failed login : 4
+ Detected brute force attacks : user1
+ Time limit in minutes: 1
+

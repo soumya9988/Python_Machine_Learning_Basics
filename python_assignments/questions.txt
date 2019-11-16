@@ -1,0 +1,37 @@
+    1. Create a website downloader. Given a url, find all the links and store each page into local machine.
+You may use python libraries for HTTP requests, file IO, Pattern matching etc. If the downloaded page contains other
+links, they also are downloaded. Cycles, if any, must be identified and handled.
+
+2.Write a program to detect password brute forcing by checking log file. Log file store failed logins in following format,
+
+username date(MM:DD:YYYY) time(HH:MM:SS)
+username date(MM:DD:YYYY) time(HH:MM:SS)
+...
+
+Also input a minimum number of failed logins and time interval (in minutes) for specifying an attack (eq: >=5 failed
+logins within 3 minutes is identified as an attack). Log file attached.
+
+3. Write a program to auto login on www.facebook.com using selenium and python.
+
+4. Create a graph for the following using Python. Place all such graphs into a gallery in a page and produce the PDF
+report.
+a) temperature recorded at your city over last 7 days
+b) If you get $100, and you are asked to buy five different stuff adding up to $100—draw a pie chart of the cost of the
+    items
+c) Draw the a graph of the following data. Identify which graph is the best to represent this.
+Height(in inches)   Shoe size
+60                  3
+61                  3
+62                  4
+63                  4
+64                  5
+65                  5
+66                  6
+67                  6
+68                  7
+
+d) Create a word cloud for the words in the webpage:
+http://taaism.com/resumecv-writing-12-things-for-a-fresher-to-ponder/
+
+
+5. Extract email IDs from visiting card images (JPGs) using Python
