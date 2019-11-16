@@ -43,3 +43,4 @@ perc_e = count_e / count_alpha * 100
 
 
 print('No of alphabets are %d, digits are %d and no of E are %d %.2f)' % (count_alpha, count_digit, count_e, perc_e))
+

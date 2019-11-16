@@ -1,6 +1,5 @@
 import sys
 
-
 def print_arg():
     print(sys.argv)
 

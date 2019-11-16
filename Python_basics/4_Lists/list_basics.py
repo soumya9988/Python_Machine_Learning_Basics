@@ -43,4 +43,3 @@ print('Hope you like all the %d items!' % (len(food_menu) - 1 + len(food_menu[2]
 
 
 
-

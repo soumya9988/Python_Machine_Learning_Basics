@@ -53,4 +53,3 @@ while isInScreen(win, tur) and isInScreen(win, ttl) and safe_dist(tur, ttl):
         ttl.forward(175)
 
 win.exitonclick()
-

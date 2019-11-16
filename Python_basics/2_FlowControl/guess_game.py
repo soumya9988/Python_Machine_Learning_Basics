@@ -18,4 +18,3 @@ while True:
     if cont.lower() == 'exit':
         break
 
-

@@ -26,3 +26,4 @@ words = " ".join(words)
 print('The PigLatin version is ', words)
 print('Total number of words in the string is ', no_of_words)
 
+

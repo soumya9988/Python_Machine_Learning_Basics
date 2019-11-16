@@ -6,3 +6,4 @@ password_length = strength[choice]
 password = sample(characters, password_length)
 password = "".join(password)
 print('Suggested password for you is:', password)
+

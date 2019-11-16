@@ -21,3 +21,4 @@ print('Rolling.....')
 random_tot = roll_dice()
 sleep(5)
 print_outcome(guess_tot, random_tot)
+

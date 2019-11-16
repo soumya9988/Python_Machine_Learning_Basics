@@ -20,7 +20,6 @@ def decide_winner(user, comp):
     else:
         print(messages[2])
 
-
 while running:
     user_choice = input('Enter your choice; ROCK, PAPER or SCISSORS: ')
     user_choice = user_choice.upper()

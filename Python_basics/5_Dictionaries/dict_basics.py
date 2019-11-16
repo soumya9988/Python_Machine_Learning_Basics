@@ -23,3 +23,4 @@ print(item_list[2::2])
 print(name[2:6:2])
 
 
+

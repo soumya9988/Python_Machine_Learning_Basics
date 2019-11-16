@@ -18,4 +18,3 @@ while times > 0:
 
 print('The result after flipping the coin is:', result)
 print('Heads : %d, Tails : %d' % (heads, tails))
-

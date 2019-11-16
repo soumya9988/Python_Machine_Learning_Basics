@@ -20,4 +20,3 @@ while True:
         max_limit = computer_choice
     if min_limit >= max_limit:
         break
-

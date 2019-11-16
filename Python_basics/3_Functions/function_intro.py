@@ -21,3 +21,4 @@ if number1 != number2:
     print('%d is the smaller number' % (min_no))
 else:
     print('Both are equal')
+
